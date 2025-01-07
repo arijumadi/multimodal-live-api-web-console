@@ -40,20 +40,22 @@ function App() {
   return (
     <div className="App">
       <LiveAPIProvider url={uri} apiKey={API_KEY}>
-        <div className="streaming-console">
+        <div className="streaming-console glass">
           <SidePanel />
           <main>
-            <div className="main-app-area">
-              {/* APP goes here */}
-              <Altair />
-              <video
-                className={cn("stream", {
-                  hidden: !videoRef.current || !videoStream,
-                })}
-                ref={videoRef}
-                autoPlay
-                playsInline
-              />
+            <div className="main-app-area hover-scale">
+              <h1 className="text-gradient">Multimodal Live API</h1>
+              <div className="flex flex-col gap-4">
+                <Altair />
+                <video
+                  className={cn("stream hover-scale", {
+                    hidden: !videoRef.current || !videoStream,
+                  })}
+                  ref={videoRef}
+                  autoPlay
+                  playsInline
+                />
+              </div>
             </div>
 
             <ControlTray
