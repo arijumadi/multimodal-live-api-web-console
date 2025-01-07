@@ -44,7 +44,7 @@ function App() {
           <SidePanel />
           <main>
             <div className="main-app-area hover-scale">
-              <h1 className="text-gradient">Multimodal Live API</h1>
+              <h1 className="text-gradient">Jarvis Realtime</h1>
               <div className="flex flex-col gap-4">
                 <Altair />
                 <video
